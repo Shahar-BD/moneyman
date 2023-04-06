@@ -13,7 +13,7 @@ import { createLogger, logToPublicLog } from "./utils/logger.js";
 const logger = createLogger("main");
 
 process.on("uncaughtException", (err, origin) => {
-  console.error("uncaughtException, sending error");
+  console.error("uncaughtException, sending error. origin: " + origin);
   sendError(`
 Caught exception: ${err}
 Exception origin: ${origin}`).catch((e) => {});
