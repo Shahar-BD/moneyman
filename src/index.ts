@@ -29,10 +29,10 @@ async function run() {
   logger("Scraping started");
 
   await send(getConfigSummary());
-  logger(getConfigSummary());
+  logger("Sent config summary");
 
   const message = await send("Starting...");
-
+  logger("Stating...");
   if (!storages.length) {
     logger("No storages found, aborting");
     await editMessage(message?.message_id, "No storages found, aborting");
