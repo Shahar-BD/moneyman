@@ -29,6 +29,7 @@ async function run() {
   logger("Scraping started");
 
   await send(getConfigSummary());
+  logger(getConfigSummary());
 
   const message = await send("Starting...");
 
