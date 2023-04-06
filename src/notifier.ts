@@ -83,6 +83,13 @@ ${getPendingSummary(results)}
 }
 
 export function getConfigSummary() {
+  logger('Getting config summary');
+  logger(`
+Config:
+  Worksheet name: ${worksheetName}
+  Start Date: ${scrapeStartDate.toISOString()} (${daysBackToScrape} days back)
+  TZ: ${Intl.DateTimeFormat().resolvedOptions().timeZone}
+  `);
   return `
 Config:
   Worksheet name: ${worksheetName}
